@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap IIFE</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <h1 class="text-center">Walk-A-Thon</h1>
+    <div class="row">
+      <div class="col-md-offset-1 col-md-4 col-sm-6 col-xs-12">
+        <h2>Donations</h2>
+        <table id="donorTable" class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Pledge</th>
+              <th>Donation Type</th>
+            </tr>
+          </thead>
+          <tbody id='tbody'>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-offset-1 col-md-4 col-sm-6 col-xs-12">
+        <h2>Donation Form</h2>
+        <form id='donationForm' class="form-horizontal">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" name="name" id="name" value="" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Pledge</label>
+            <div class="col-sm-10">
+              <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="number" name="pledge" id="pledge" value="" class="form-control" />
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Donation Type</label>
+            <div class="col-sm-10">
+              <select name="donationType" id="donationType" class="form-control">
+                <option value="Single">Single</option>
+                <option value="Per Lap">Per Lap</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="button" name="submitBtn" onclick="submitForm()" class="btn btn-default btn-primary pull-right">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>
